@@ -24,7 +24,7 @@ cat ./main.tex
 
 すると，以下の内容が表示されるはずです．
 
-```LaTex
+```latex
 
 \documentclass[twocolumn,11pt]{jsarticle}
 \usepackage[dvipdfmx]{graphicx}
@@ -70,7 +70,7 @@ scp <UserID>@<Coins IP>:~/main.pdf .
 
 ## 具体的に，あのTexファイルには何が書かれていたの？
 
-``` LaTex
+``` latex
 \documentclass[twocolumn,11pt]{jsarticle}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[dvipdfmx,bookmarks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
