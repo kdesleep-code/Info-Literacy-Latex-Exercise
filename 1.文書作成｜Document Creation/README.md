@@ -184,7 +184,7 @@ Texファイルには大きく，**コマンド**と**文章**の２つが含ま
 著者名をあなたの名前に変更してもう一度コンパイル＆ダウンロードしてみましょう．  
 著者名が「堀江和正とゆかいな仲間たち」からあなたの名前になっていることを確認してください．
 
-[次へ]()
+[次へ](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/2.%E6%96%87%E6%9B%B8%E6%A7%8B%E9%80%A0%EF%BD%9CDocument%20Structure/README.md)
 
 
 
