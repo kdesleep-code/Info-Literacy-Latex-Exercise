@@ -106,6 +106,8 @@ LaTeXでは、箇条書きを作るために次の3種類がよく使われま�
 | `\begin{enumerate}~\end{enumerate}` | 「1.」「2.」などの番号付きリスト | 手順や順序のある説明 |
 | `\begin{description}~\end{description}` | 用語＋説明の組み合わせ | 用語解説や略語の定義など |
 
+各項目は`\item (内容)`と記述します．
+
 ---
 
 ### 例1：通常の箇条書き（itemize）
