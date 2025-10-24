@@ -1,4 +1,4 @@
-# 2.図・表・数式｜Figure, Table, Equation
+# 3.図・表・数式｜Figure, Table, Equation
 文責：堀江和正
 
 [English Version](README_en.md)
