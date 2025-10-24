@@ -23,7 +23,86 @@
 
 ## 数式の挿入方法
 
+数式は，`\begin{equation}~\end{equation}`や`\begin{eqnarray}~\end{eqnarray}`を使うことで挿入することができます．
+
+例1）
+```latex
+\begin{equation}
+E = mc^2
+\end{equation}
+```
+
+`equation`には，数式を一つだけ入れることができます．
+
+例2）
+
+```latex
+\begin{eqnarray}
+a + b &=& c \\
+x + y &=& z
+\end{eqnarray}
+```
+
+`eqnarray`には，複数の数式を入れることができます．  
+表と同じように，改行は`\\`を用い，`&`を用いることで複数式の位置合わせを行うことができます．
+
+<details><summary>補足</summary>
+ `amsmath` パッケージを使用している場合は，`\begin{align} ~ \end{align}` でより美しく式を整列できます．
+</details>
+
+### よく使う式の例
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **添字・インデックス** | $a_{i}$ | `a_{i}` | 添字（下付き） |
+|  | $a^{n}$ | `a^{n}` | 累乗（上付き） |
+|  | $x_{ij}$ | `x_{ij}` | 二重添字 |
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **四則演算・累乗** | $a + b = c$ | `a + b = c` | 足し算 |
+|  | $a - b = c$ | `a - b = c` | 引き算 |
+|  | $a \times b = c$ | `a \times b = c` | 掛け算（×） |
+|  | $a \div b = c$ | `a \div b = c` | 割り算（÷） |
+|  | $\frac{a}{b} = c$ | `\frac{a}{b} = c` | 分数 |
+|  | $a^2 + b^2 = c^2$ | `a^2 + b^2 = c^2` | 累乗 |
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **関数の例** | $\sin \theta = \frac{y}{r}$ | `\sin \theta = \frac{y}{r}` | 三角関数 |
+|  | $\cos \theta = \frac{x}{r}$ | `\cos \theta = \frac{x}{r}` | 三角関数 |
+|  | $\tan \theta = \frac{y}{x}$ | `\tan \theta = \frac{y}{x}` | 三角関数 |
+|  | $\log_{2} 8 = 3$ | `\log_{2} 8 = 3` | 対数関数 |
+|  | $\max(x, y)$ | `\max(x, y)` | 最大値 |
+|  | $\min(x, y)$ | `\min(x, y)` | 最小値 |
+|  | $\sqrt{x^2 + y^2}$ | `\sqrt{x^2 + y^2}` | 平方根 |
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **微積分** | $\frac{dy}{dx} = 3x^2$ | `\frac{dy}{dx} = 3x^2` | 微分（分数形式） |
+|  | $\int_0^1 x^2 dx = \frac{1}{3}$ | `\int_0^1 x^2 dx = \frac{1}{3}` | 積分（下限・上限あり） |
+|  | $\lim_{x \to 0} \frac{\sin x}{x} = 1$ | `\lim_{x \to 0} \frac{\sin x}{x} = 1` | 極限 |
+|  | $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$ | `\sum_{i=1}^{n} i = \frac{n(n+1)}{2}` | 総和 |
+|  | $\prod_{i=1}^{n} a_i$ | `\prod_{i=1}^{n} a_i` | 積記号 |
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **ベクトル** | $\overline{AB}$ | `\overline{AB}` | 上線（ベクトルや区間） |
+|  | $\vec{v}$ | `\vec{v}` | 矢印付きベクトル |
+|  | $\vec{a} \cdot \vec{b} = \|\vec{a}\|\|\vec{b}\|\cos\theta$ | `\vec{a} \cdot \vec{b} = \|\vec{a}\|\|\vec{b}\|\cos\theta` | 内積（スカラー積） |
+|  | $\vec{a} \times \vec{b} = \|\vec{a}\|\|\vec{b}\|\sin\theta\vec{n}$ | `\vec{a} \times \vec{b} = \|\vec{a}\|\|\vec{b}\|\sin\theta\vec{n}` | 外積（ベクトル積） |
+|  | $\|\vec{v}\| = \sqrt{x^2 + y^2 + z^2}$ | `\|\vec{v}\| = \sqrt{x^2 + y^2 + z^2}` | ベクトルの大きさ（ノルム） |
+
+| 分類 | 表現例 | LaTeX コード | 備考 |
+|:------|:------|:--------------|:------|
+| **行列** | <img width="536" height="261" alt="image" src="https://github.com/user-attachments/assets/e8b6c522-05a5-4c9c-9ddf-115b224414c4" /> |<img width="725" height="235" alt="image" src="https://github.com/user-attachments/assets/62d92035-ba45-478b-a8ec-5fda7ced30f3" /> | 角括弧付き行列 |
+|  | $\det(A) = ad - bc$ | `\det(A) = ad - bc` | 行列式 |
+
+
 ### 文中で数式を使いたい場合
+
+本文中で数式を使いたい場合は，`\begin{equation}~\end{equation}`ではなく，$マークを使ってください．  
+例）`$a > 0$`の時，・・・
 
 ### 特殊文字
 
