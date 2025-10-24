@@ -98,6 +98,8 @@ x + y &=& z
 | **行列** | <img width="536" height="261" alt="image" src="https://github.com/user-attachments/assets/e8b6c522-05a5-4c9c-9ddf-115b224414c4" /> |<img width="725" height="235" alt="image" src="https://github.com/user-attachments/assets/62d92035-ba45-478b-a8ec-5fda7ced30f3" /> | 角括弧付き行列 |
 |  | $\det(A) = ad - bc$ | `\det(A) = ad - bc` | 行列式 |
 
+* https://tex.stackexchange.com/questions/204621/matrix-in-latex より数式を一部引用．
+
 
 ### 文中で数式を使いたい場合
 
