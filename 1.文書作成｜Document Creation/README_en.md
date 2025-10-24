@@ -182,4 +182,4 @@ Try changing the author name from
 to your own name, recompile, and download again.  
 Confirm that the author name has been updated correctly.
 
-[Next]()  
+[Next](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/2.%E6%96%87%E6%9B%B8%E6%A7%8B%E9%80%A0%EF%BD%9CDocument%20Structure/README_en.md)  
