@@ -196,4 +196,4 @@ Now that you understand how to structure and format a LaTeX document,
 open `body.txt` in this directory and copy its content into `main.tex`.  
 Then, structure it properly so that it matches the example in `main.pdf`.
 
-[Next]()
+[Next](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/3.%E5%9B%B3%E3%83%BB%E8%A1%A8%E3%83%BB%E6%95%B0%E5%BC%8F%EF%BD%9CFigures%2C%20Tables%2C%20and%20Equations/README_en.md)
