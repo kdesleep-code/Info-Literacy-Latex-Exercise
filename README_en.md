@@ -82,7 +82,7 @@ This repository contains five directories:
 4. **References**  
    - Manage and cite references with BibTeX.  
 5. **Advanced Exercise (optional)**  
-   - Explore additional packages and class file customization.
+   - Tips.
 
 Each directory includes its own README with explanations and exercises—please follow the instructions step by step.
 
