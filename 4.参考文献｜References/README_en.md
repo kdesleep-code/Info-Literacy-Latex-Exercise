@@ -191,3 +191,8 @@ Intermediate files such as `.aux` or `.bbl` are not required.
 - Reference numbers are correctly linked in text  
 - Bibliography list is displayed  
 - Reference numbers appear properly within the text
+
+>[!Note]
+>There are some expressions in the sample (main.pdf) that are not explained in the class materials.  
+>You will not be penalized if these are not reproduced.  
+>However, if you research how to implement them on your own (e.g., online) and successfully reproduce them, you will receive extra credit.
