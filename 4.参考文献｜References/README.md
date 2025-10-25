@@ -69,7 +69,7 @@ LaTeXでは，bibtexと呼ばれるシステムを用いることで，容易に
 
 1から順番に見ていきましょう．
 
-## `.bib`ファイルと入手/作成方法
+## 1. `.bib`ファイルと入手/作成方法
 
 まず，`.bib`ファイルは書誌情報が書かれたテキストの拡張子を変更し`.bib`にしたファイルです．  
 具体的には以下が記述されています．
@@ -89,26 +89,25 @@ LaTeXでは，bibtexと呼ばれるシステムを用いることで，容易に
 各行の意味は，
 
 - `@article{Stephansen2018,`:  
-参考文献が論文＝`article`であることを示すとともに，この文献に名前（`Stephansen2018`）を付けています．  
-この他，本(`book`), 国際会議の予稿(`inproceedings`), その他(`misc`)が指定可能です．
+参考文献が論文＝articleであることを示すとともに，この文献に名前（Stephansen2018）を付けています．  
 - `author = {Stephansen, Jesper B. and others},`:  
 著者  
-- `title = {Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy},`:  
+- `title = {Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy},`:
 論文のタイトル  
-- `journal = {Nature Communications},`:  
+- `journal = {Nature Communications},`
 論文誌  
-- `year = {2018},`:  
+- `year = {2018},`:
 掲載年  
-- `volume = {9},`:  
+- `volume = {9},`:
 雑誌の号数  
-- `number = {5229},`:  
+- `number = {5229},`:
 記事の番号  
-- `doi = {10.1038/s41467-018-07229-3}`:  
+- `doi = {10.1038/s41467-018-07229-3}`:
 DOI
 
 です．
 
-この他，ページ数を示すための`pages`なども存在しています．
+この他，書籍名を示す`booktitle`や，ページ数を示すための`pages`なども存在しています．
 
 論文の掲載ページには，これらの情報が記載されているので，これらをコピー＆ペーストすることで.bibファイルを作成することができます．
 
@@ -126,10 +125,63 @@ DOI
 [参考](example.bib)
 
 
+## 2. .texファイルで読み込む方法
+
+本文中で，`\cite{文献名}`を指定することで，文献番号を挿入することができます．
+
+また，論文の最後に，
+
+`\bibliography{.bibファイル名}`          % 拡張子 .bib は書かない（refs.bib を読む）
+
+と書くことで，本文中で参照した文献の一覧を挿入することができます．  
+
+>[!Note]
+>1. .bibファイルに書かれているが，論文内で参照されていない文献は，文献一覧では無視されます．  
+>2. 文献一覧の順番は，論文中での登場順になります．.bibファイルにかかれている順番は無視されます．
+
+
+例）
+
+```latex
+
+% main.tex（本文のどこかで引用）
+本研究は \cite{Stephansen2018} に基づく．
+
+% 文末（\end{document} の直前がおすすめ）
+\bibliography{example}          % 拡張子 .bib は書かない（refs.bib を読む）
+
+```
+
+## 3. bibtexでのコンパイル
+
+bibtexを利用する場合，コンパイルの手順（`platex hoge`→`dvipdfmx hoge`）が変更になります．  
+具体的には，
+
+```bash
+
+platex main.tex        # 1回目（引用の目次作成）
+bibtex main            # BibTeX 走らせて .bbl 生成
+platex main.tex        # 2回目（参照を解決）
+platex main.tex        # 3回目（ページ番号や相互参照の最終整合）
+dvipdfmx main.dvi      # PDF 化
+
+```
+
+という手順を踏むことになります．
 
 ## ここまで理解したら，
 
-ここまでで作成した`main.tex`に，図と表を加え，お手本の`main.pdf`に近づけましょう．  
-図のファイルは本ディレクトリで配布しています．  
-また，文中の??となっている部分は，元々図・表・数式の参照番号が入っていた部分です．  
-`\label{}`,`ref{}`を用いて，適切な参照番号を割り振ってください．
+ここまでで作成した`main.tex`に，参考文献情報を加え，お手本の`main.pdf`に近づけましょう．  
+一部の参考文献の.bib情報は[こちら](example.bib)．    
+抜けている文献の書誌情報は以下の通りです．
+
+> この文献は，「国際会議の予稿集」に含まれている論文です．
+> タイトル U-Time: A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging
+> 著者 Perslev, Mathias and others
+> 本のタイトル Advances in Neural Information Processing Systems
+> 号 32
+> ページ 4415--4426
+> 出版年 2019年
+
+また，現在`main.tex`文中の**となっている部分は，元々参考文献番号が入っていた部分です．  
+`\cite{}`を用いて，適切な参照番号を割り振ってください．
