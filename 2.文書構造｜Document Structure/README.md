@@ -195,7 +195,7 @@ LaTeXでは、箇条書きを作るために次の3種類がよく使われま�
 本ディレクトリの`body.txt`に，章立て前の本文が入っています．  
 これを`main.tex`にコピペし，`main.pdf`と同じになるように章立てを行ってください．
 
-[次へ]()
+[次へ](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/3.%E5%9B%B3%E3%83%BB%E8%A1%A8%E3%83%BB%E6%95%B0%E5%BC%8F%EF%BD%9CFigures%2C%20Tables%2C%20and%20Equations/README.md)
 
 
 
