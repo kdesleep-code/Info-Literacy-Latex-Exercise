@@ -89,20 +89,21 @@ LaTeXでは，bibtexと呼ばれるシステムを用いることで，容易に
 各行の意味は，
 
 - `@article{Stephansen2018,`:  
-参考文献が論文＝articleであることを示すとともに，この文献に名前（Stephansen2018）を付けています．  
+参考文献が論文＝`article`であることを示すとともに，この文献に名前（`Stephansen2018`）を付けています．  
+この他，本(`book`), 国際会議の予稿(`inproceedings`), その他(`misc`)が指定可能です．
 - `author = {Stephansen, Jesper B. and others},`:  
 著者  
-- `title = {Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy},`:
+- `title = {Neural network analysis of sleep stages enables efficient diagnosis of narcolepsy},`:  
 論文のタイトル  
-- `journal = {Nature Communications},`
+- `journal = {Nature Communications},`:  
 論文誌  
-- `year = {2018},`:
+- `year = {2018},`:  
 掲載年  
-- `volume = {9},`:
+- `volume = {9},`:  
 雑誌の号数  
-- `number = {5229},`:
+- `number = {5229},`:  
 記事の番号  
-- `doi = {10.1038/s41467-018-07229-3}`:
+- `doi = {10.1038/s41467-018-07229-3}`:  
 DOI
 
 です．
