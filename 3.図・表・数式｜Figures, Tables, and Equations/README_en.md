@@ -199,7 +199,7 @@ These numbers—**reference numbers**—allow you to refer to specific items in 
 
 To use reference numbers, you combine:
 - `\label{}` → assign a reference name  
-- `\ref{}` or `\eqref{}` → refer to the assigned label
+- `\ref{}` → refer to the assigned label
 
 ### Example: Figures and Tables
 
