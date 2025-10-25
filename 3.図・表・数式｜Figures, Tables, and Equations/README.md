@@ -278,10 +278,11 @@ x + y &=& z
 
 例）  
 **図・表の場合**
-`\caption{~~~}`の直後に`\label{hogehoge}`を記述してください．
+`\caption{~~~}`の直後に`\label{hogehoge}`を記述してください．  
 その後，本文中で`\ref{hogehoge}`と書けば，自動的に図表番号に置き換わります．
 
 <details><summary>例</summary>
+
 ```latex
 \begin{figure}[htbp]
   \centering
@@ -292,6 +293,7 @@ x + y &=& z
 
 サンプル図\ref{fig:samples}より，～～～
 ```
+
 </details>
 
 **数式の場合**
