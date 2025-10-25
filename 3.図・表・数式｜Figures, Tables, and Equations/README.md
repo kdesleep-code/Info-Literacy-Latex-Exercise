@@ -316,3 +316,5 @@ x + y &=& z
 図のファイルは本ディレクトリで配布しています．  
 また，文中の??となっている部分は，元々図・表・数式の参照番号が入っていた部分です．  
 `\label{}`,`ref{}`を用いて，適切な参照番号を割り振ってください．
+
+[次](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/4.%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%EF%BD%9CReferences/README.md)
