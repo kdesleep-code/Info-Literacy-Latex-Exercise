@@ -96,6 +96,25 @@
 また，`\multirow`や`\multicolumn`を用いることで，より複雑な表を作成することもできます．  
 [参考](https://www.overleaf.com/learn/latex/Tables)
 
+## 図表のぶち抜き
+
+2段組みの文書において，図表を書面の横一杯に挿入したいというケースがよくあります．  
+（例：`main.pdf`の図2）
+
+その場合は，  
+`\begin{table}[htbp]`, `\begin{figure}[htbp]`  
+を，それぞれ  
+
+`\begin{table*}[htbp]`, `\begin{figure*}[htbp]`  
+
+のようにアスタリスク（*）を付けることで段組みをぶち抜くことができます．
+
+> [!Tip]
+> 論文誌によっては「ぶち抜き禁止（1段幅に収めること）」が指定されている場合があります．  
+> 投稿規定を必ず確認してください．
+
+---
+
 ## 数式の挿入方法
 
 数式は，`\begin{equation}~\end{equation}`や`\begin{eqnarray}~\end{eqnarray}`を使うことで挿入することができます．
