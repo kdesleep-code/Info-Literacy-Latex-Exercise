@@ -232,3 +232,5 @@ and reproduce the example `main.pdf` provided in this directory.
 
 Replace all “??” placeholders with appropriate reference numbers using  
 `\label{}` and `\ref{}` commands.
+
+[Next](https://github.com/kdesleep-code/Info-Literacy-Latex-Exercise/blob/main/4.%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%EF%BD%9CReferences/README_en.md)
