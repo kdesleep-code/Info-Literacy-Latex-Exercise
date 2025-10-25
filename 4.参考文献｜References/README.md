@@ -175,13 +175,13 @@ dvipdfmx main.dvi      # PDF 化
 一部の参考文献の.bib情報は[こちら](example.bib)．    
 抜けている文献の書誌情報は以下の通りです．
 
-> この文献は，「国際会議の予稿集」に含まれている論文です．
-> タイトル U-Time: A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging
-> 著者 Perslev, Mathias and others
-> 本のタイトル Advances in Neural Information Processing Systems
-> 号 32
-> ページ 4415--4426
-> 出版年 2019年
+> この文献は，「国際会議の予稿集」に含まれている論文です．  
+> タイトル U-Time: A Fully Convolutional Network for Time Series Segmentation Applied to Sleep Staging  
+> 著者 Perslev, Mathias and others  
+> 本のタイトル Advances in Neural Information Processing Systems  
+> 号 32  
+> ページ 4415--4426  
+> 出版年 2019年  
 
 また，現在`main.tex`文中の**となっている部分は，元々参考文献番号が入っていた部分です．  
 `\cite{}`を用いて，適切な参照番号を割り振ってください．
