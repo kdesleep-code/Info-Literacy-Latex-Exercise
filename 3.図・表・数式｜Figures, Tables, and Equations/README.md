@@ -19,7 +19,82 @@
 
 ## 図の挿入方法
 
+>[!Note]
+>ここでは，授業で用いているシステム（platex + dvipdfmx）に合わせた説明をしています．
+>使用するシステム構成によっては，図として利用できるファイル形式が異なる場合があります．
+
+まずは挿入する図のファイルを作成してください．利用できるファイル形式は，
+- .eps
+- .pdf
+- .png
+- .jpg
+
+です．ベクター画像（グラフなど）には.pdfを，ラスタ画像（写真など）には.pngを用いることを推奨します．
+
+本文中で図を挿入する際は，
+
+```latex
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/sample.png}
+  \caption{サンプル図：〇〇の関係を示すグラフ}
+\end{figure}
+```
+
+のように記述します．  
+各行の意味は，
+- `\begin{figure}`: [htbp]	図を挿入する環境を開始します。[htbp]は配置の優先度（here / top / bottom / page）を指定します。
+- `\centering`: 図を中央寄せにします。
+- `\includegraphics`:	画像ファイルを読み込みます。width=0.8\linewidthは本文幅の8割の大きさに指定しています。
+  {}の中には，読み込む画像ファイルの場所を指定しています．{figures/sample.png}の場合は，  
+```
+  作業ディレクトリ　┬　コンパイルしたい.texファイル  
+                  └　figureディレクトリ　- sample.png
+```
+というファイル構造になっていることを想定しています．
+
+- `\caption{...}`:	図のキャプション（タイトル）を付けます。
+
+です．
+
+**論文の場合，図のキャプションは図の下につけるのが標準です．**
+
 ## 表の挿入方法
+
+本文中で表を挿入する際は，
+
+```latex
+\begin{table}[htbp]
+  \centering
+  \caption{実験条件の一覧}
+  \begin{tabular}{lcc}
+    \hline
+    条件名 & 温度 [℃] & 時間 [min] \\
+    \hline
+    条件A & 25 & 30 \\
+    条件B & 30 & 45 \\
+    条件C & 35 & 60 \\
+    \hline
+  \end{tabular}
+\end{table}
+```
+
+のように記述します．  
+各行の意味は，
+
+- `\begin{table}[htbp]`: 表を挿入する環境を開始します。（[htbp]は配置指定で、ここでも「here / top / bottom / page」の略）
+- `\centering`: 表を中央寄せにします。
+- `\caption{...}`: 表のキャプション（タイトル）を付けます。
+- `\begin{tabular}{lcc}`: 列の配置を指定します。l=左寄せ、c=中央寄せ、r=右寄せ。ここでは3列構成です。
+- `\hline`: 横線を引きます。
+- 各行の中身: \& で列を区切り、行末に \\\\ を置きます。
+
+です．
+
+**表のキャプション（タイトル）は，表の上に載せるのが標準です．**
+
+また，`\multirow`や`\multicolumn`を用いることで，より複雑な表を作成することもできます．  
+[参考](https://www.overleaf.com/learn/latex/Tables)
 
 ## 数式の挿入方法
 
@@ -199,13 +274,42 @@ x + y &=& z
 この"図2"が参照番号を利用している部分です．
 
 このような参照番号は，LaTeX側で自動的に数字を割り当てることができます．
-参照番号の利用には`\label{}`と`\ref{}`の2種類のコマンドを使用します．
+参照番号の利用には`\label{}`と`\ref{}` or `\eqref{}`の2種類のコマンドを使用します．
 
-例）
-**図の場合**
+例）  
+**図・表の場合**
+`\caption{~~~}`の直後に`\label{hogehoge}`を記述してください．
+その後，本文中で`\ref{hogehoge}`と書けば，自動的に図表番号に置き換わります．
 
-**表の場合**
+<details><summary>例</summary>
+```latex
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/sample.png}
+  \caption{サンプル図：〇〇の関係を示すグラフ}
+  \label{fig:samples} $←ここに入れる 
+\end{figure}
+
+サンプル図\ref{fig:samples}より，～～～
+```
+</details>
 
 **数式の場合**
+式の直後に`\label{hogehoge}`を記述してください．
+本文中では，`\ref{}`の代わりに，\eqref{}を用いてください．
+
+<details><summary>例</summary>
+```latex
+\begin{equation}
+  f(x) = \lim_{x\to\infty} \int_0^x g(t)\,dt \label{eq:f-inf} $←ここに入れる
+\end{equation}
+である。\eqref{eq:f-inf}式はすなわち，〇〇を意味する。
+```
+</details>
 
 ## ここまで理解したら，
+
+2. で作成した`main.tex`に，図と表を加え，お手本の`main.pdf`に近づけましょう．  
+図のファイルは本ディレクトリで配布しています．
+また，文中の??となっている部分は，元々図表の参照番号が入っていた部分です．  
+`\label{}`,`ref{}`を用いて，適切な参照番号を割り振ってください．
