@@ -100,6 +100,24 @@ Each line means:
 You can also create more complex tables using `\multirow` and `\multicolumn`.  
 See [Overleaf’s Table Guide](https://www.overleaf.com/learn/latex/Tables) for details.
 
+
+## Full-width Figures and Tables
+
+In two-column documents, you may sometimes want a figure or table to span the entire page width.  
+(For example: Figure 2 in `main.pdf`)
+
+To achieve this, replace  
+`\begin{table}[htbp]` or `\begin{figure}[htbp]`  
+with  
+
+`\begin{table*}[htbp]` or `\begin{figure*}[htbp]`
+
+By adding an asterisk (`*`), the figure or table will extend across both columns.
+
+> [!Tip]
+> Some journals or conferences **prohibit full-width figures/tables**, requiring all content to fit within a single column.  
+> Always check the author guidelines before submission.
+
 ---
 
 ## How to Insert Equations
