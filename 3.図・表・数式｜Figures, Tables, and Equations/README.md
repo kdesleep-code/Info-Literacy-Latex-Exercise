@@ -300,12 +300,14 @@ x + y &=& z
 式の直後に`\label{hogehoge}`を記述してください．
 
 <details><summary>例</summary>
+
 ```latex
 \begin{equation}
   f(x) = \lim_{x\to\infty} \int_0^x g(t)\,dt \label{eq:f-inf} $←ここに入れる
 \end{equation}
 である。\ref{eq:f-inf}式はすなわち，〇〇を意味する。
 ```
+
 </details>
 
 ## ここまで理解したら，
