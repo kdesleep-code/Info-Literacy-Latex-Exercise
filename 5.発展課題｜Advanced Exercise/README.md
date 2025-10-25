@@ -28,6 +28,7 @@
 ```
 
 - よく使われる学会テンプレート（公式配布ページ）
+
 | 学会・出版社           | LaTeXテンプレート配布ページ                                                                                            |
 | :--------------- | :---------------------------------------------------------------------------------------------------------- |
 | IEEE             | [IEEE Author Center: LaTeX Templates](https://www.ieee.org/conferences/publishing/templates.html)           |
@@ -43,14 +44,22 @@
 
 
 ## そのほか，知っていると便利な操作について
->[!Note] 英語ページです．適宜翻訳して読んでください．
+>[!Note]
+>英語ページです．適宜翻訳して読んでください．
 
 ### カスタムコマンド
 [https://www.physicsread.com/latex-newcommand/](https://www.physicsread.com/latex-newcommand/)
 
-### Table関連
+### Table関連: Multirow, MultiColumnなど
 [https://www.overleaf.com/learn/latex/Tables](https://www.overleaf.com/learn/latex/Tables)
 
 ### 太字，イタリック，アンダーライン
 [https://www.overleaf.com/learn/latex/Bold%2C_italics_and_underlining](https://www.overleaf.com/learn/latex/Bold%2C_italics_and_underlining)
+
+### 図関連: Subfigure（複数の図を並列に並べる）など
+[https://www.overleaf.com/learn/latex/Positioning_images_and_tables#Positioning_images](https://www.overleaf.com/learn/latex/Positioning_images_and_tables#Positioning_images)
+
+>[!Important]
+>[Overleafのドキュメンテーション](https://www.overleaf.com/learn)には，様々なコマンドの説明が掲載されています．  
+>GPT等を用いて特定の整形をするためのコマンドを教えてもらうのもよい手でしょう．
 
